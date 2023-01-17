@@ -27,11 +27,11 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 [Awesome-Books] <a name="about-project"></a>
+# 📖 [To-do-list] <a name="about-project"></a>
 
 > Describe your project in 1 or 2 sentences.
 
-**[Awesome-Books]**  Is a tool that helps to organize your day. It simply lists the things that you need to do and allows you to mark them as complete. You will build a simple website that allows for doing that, and you will do it using ES6 and Webpack!.
+**[To-do-list]**  Is a tool that helps to organize your day. It simply lists the things that you need to do and allows you to mark them as complete. You will build a simple website that allows for doing that, and you will do it using ES6 and Webpack!.
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -110,7 +110,7 @@ In order to run this project you need:
 
 Clone this repository to your desired folder:
 
-1. Go to the [repository page](https://github.com/RaphDasilva/Awesome-books).
+1. Go to the [repository page](https://github.com/RaphDasilva/To-do-list).
 2. Press the "Code" button and copy the link.
 3. Clone it using git command `git clone <link>`.
 
@@ -179,15 +179,13 @@ Example:
 
 <!-- FUTURE FEATURES -->
 
-<!-- ## 🔭 Future Features <a name="future-features"></a>
+## 🔭 Future Features <a name="future-features"></a>
 
-> Describe 1 - 3 features you will add to the project.
 
-- [ ] **[new_feature_1]**
-- [ ] **[new_feature_2]**
-- [ ] **[new_feature_3]**
+- [ ] **[Create a complete website with navigation.]**
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p> -->
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- CONTRIBUTING -->
 
