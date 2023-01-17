@@ -38,7 +38,7 @@ const toDofunction = () => {
     const toDoList = `
             <div class="to-do-container">
                     <div class="to-do"><input type="checkbox"><input type="text" placeholder="${element.description}"></div>
-                    <div class="to-do-icon"><i class="fa-solid fa-ellipsis-vertical"></i></div>
+                    <div class="to-do-icon"><i class="fa-solid fa-ellipsis-vertical"></div>
                 </div>
             `;
     listContainer.innerHTML += toDoList;
