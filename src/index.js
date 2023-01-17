@@ -33,14 +33,17 @@ const toDoInfo = [
   },
 ];
 
-window.addEventListener('load', () => {
+const toDofunction = () => {
   toDoInfo.forEach((element) => {
     const toDoList = `
-        <div class="to-do-container">
-                <div class="to-do"><input type="checkbox"><input type="text" placeholder="${element.description}"></div>
-                <div class="to-do-icon"><i class="fa-solid fa-ellipsis-vertical"></i></div>
-            </div>
-        `;
+            <div class="to-do-container">
+                    <div class="to-do"><input type="checkbox"><input type="text" placeholder="${element.description}"></div>
+                    <div class="to-do-icon"><i class="fa-solid fa-ellipsis-vertical"></i></div>
+                </div>
+            `;
     listContainer.innerHTML += toDoList;
   });
+};
+window.addEventListener('load', () => {
+  toDofunction();
 });
