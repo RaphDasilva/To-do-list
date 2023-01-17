@@ -16,6 +16,12 @@
   background-color: #faf5f5;
 }
 
+.container{
+  display: flex;
+  gap:5px;
+  flex-direction: column;
+}
+
 .title {
   display: flex;
   justify-content: space-between;
