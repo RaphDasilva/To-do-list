@@ -15,7 +15,7 @@
   "name": "to-do-list",
   "description": "",
   "version": "1.0.0",
-  "main": "index.js",
+  "private": true,
   "dependencies": {
     "abab": "^2.0.6",
     "abbrev": "^1.1.1",
@@ -600,7 +600,8 @@
     "zwitch": "^1.0.5"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack"
   },
   "repository": {
     "type": "git",
