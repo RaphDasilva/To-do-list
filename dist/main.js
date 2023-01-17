@@ -350,7 +350,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "body {\n    background-color: bisque;\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "* {\n  margin: 0;\n  padding: 0;\n  box-sizing: border-box;\n}\n\n.list-container {\n  display: flex;\n  flex-direction: column;\n  gap: 5px;\n  width: 70%;\n  height: auto;\n  margin: auto;\n  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.19);\n  margin-top: 50px;\n  background-color: #faf5f5;\n}\n\n.container {\n  display: flex;\n  gap: 5px;\n  flex-direction: column;\n}\n\n.title {\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  background-color: #fff;\n  color: rgb(39, 38, 38);\n  padding: 20px;\n  font-family:\n    \"Lucida Sans\",\n    \"Lucida Sans Regular\",\n    \"Lucida Grande\",\n    \"Lucida Sans Unicode\",\n    Geneva,\n    Verdana,\n    sans-serif;\n}\n\n.fa-solid {\n  font-size: 30px;\n  color: #302e2e;\n}\n\n.to-do-container {\n  display: flex;\n  align-items: center;\n  gap: 30px;\n  background-color: #fff;\n}\n\n.to-do {\n  display: flex;\n  gap: 10px;\n  padding: 20px;\n  width: 95%;\n}\n\ninput[type=\"text\"] {\n  width: 100%;\n  padding: 20px;\n  font-size: 20px;\n  color: rgb(39, 38, 38);\n  border: none;\n  padding-left: 50px;\n  font-family:\n    \"Lucida Sans\",\n    \"Lucida Sans Regular\",\n    \"Lucida Grande\",\n    \"Lucida Sans Unicode\",\n    Geneva,\n    Verdana,\n    sans-serif;\n}\n\ninput[type=\"checkbox\"] {\n  width: 30px;\n}\n\n.clear {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  padding: 40px;\n  background-color: #d1d1d1;\n  color: #a09c9c;\n  width: 100%;\n  font-family:\n    \"Lucida Sans\",\n    \"Lucida Sans Regular\",\n    \"Lucida Grande\",\n    \"Lucida Sans Unicode\",\n    Geneva,\n    Verdana,\n    sans-serif;\n  font-size: 20px;\n  font-weight: 800;\n  font-style: italic;\n}\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -534,6 +534,55 @@ var __webpack_exports__ = {};
 (() => {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(1);
+
+
+const listContainer = document.querySelector('.container');
+
+const toDoInfo = [
+  {
+    description: 'Go to School',
+    completed: false,
+    index: 1,
+  },
+
+  {
+    description: 'Eat Food',
+    completed: false,
+    index: 2,
+  },
+
+  {
+    description: 'Walkout',
+    completed: false,
+    index: 3,
+  },
+  {
+    description: 'Sleep',
+    completed: false,
+    index: 4,
+  },
+
+  {
+    description: 'Play game',
+    completed: false,
+    index: 5,
+  },
+];
+
+const toDofunction = () => {
+  toDoInfo.forEach((element) => {
+    const toDoList = `
+            <div class="to-do-container">
+                    <div class="to-do"><input type="checkbox"><input type="text" placeholder="${element.description}"></div>
+                    <div class="to-do-icon"><i class="fa-solid fa-ellipsis-vertical"></i></div>
+                </div>
+            `;
+    listContainer.innerHTML += toDoList;
+  });
+};
+window.addEventListener('load', () => {
+  toDofunction();
+});
 
 })();
 
