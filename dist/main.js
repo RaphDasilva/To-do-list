@@ -455,6 +455,105 @@ module.exports = function (cssWithMappingToString) {
   return list;
 };
 
+/***/ }),
+/* 11 */
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "clearBtn": () => (/* binding */ clearBtn),
+/* harmony export */   "listContainer": () => (/* binding */ listContainer),
+/* harmony export */   "textInput": () => (/* binding */ textInput)
+/* harmony export */ });
+const listContainer = document.querySelector('.container');
+const textInput = document.querySelector('.the-input');
+const clearBtn = document.querySelector('.clear');
+
+
+
+/***/ }),
+/* 12 */
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "addList": () => (/* binding */ addList),
+/* harmony export */   "deleteList": () => (/* binding */ deleteList),
+/* harmony export */   "editTask": () => (/* binding */ editTask),
+/* harmony export */   "getFromLocal": () => (/* binding */ getFromLocal)
+/* harmony export */ });
+/* harmony import */ var _variables_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(11);
+
+
+let toDoInfo = [];
+
+// Display Task
+const displayTask = () => {
+  _variables_js__WEBPACK_IMPORTED_MODULE_0__.listContainer.innerHTML = '';
+  toDoInfo.forEach((element) => {
+    const toDoList = `
+              <div class="to-do-container" id = "${element.index - 1}">
+                      <div class="to-do">
+                        <input type="checkbox" data-action="checkbox">
+                        <input type="text" value="${element.description}" data-action="edit" data.id = "${element.index}">
+                      </div>
+                      <div class="to-do-icon" id="delete-btn">
+                        <i class="fa-solid fa-ellipsis-vertical" data-action="delete"></i>
+                      </div>
+                  </div>
+              `;
+    _variables_js__WEBPACK_IMPORTED_MODULE_0__.listContainer.innerHTML += toDoList;
+    _variables_js__WEBPACK_IMPORTED_MODULE_0__.textInput.value = '';
+  });
+};
+// Add to local Storage
+const storeTolocalStorage = (arr) => {
+  const stringifyData = JSON.stringify(arr);
+  localStorage.setItem('toDolist', stringifyData);
+};
+
+//   Add list
+const addList = () => {
+  const eachList = {};
+  eachList.description = _variables_js__WEBPACK_IMPORTED_MODULE_0__.textInput.value;
+  eachList.completed = false;
+  eachList.index = toDoInfo.length + 1;
+  toDoInfo.push(eachList);
+  displayTask();
+  storeTolocalStorage(toDoInfo);
+};
+
+const resetIndex = (arr) => {
+  for (let i = 0; i < arr.length; i += 1) {
+    arr[i].index = i + 1;
+  }
+};
+
+// Delete list
+const deleteList = (index) => {
+  toDoInfo.splice(index, 1);
+  resetIndex(toDoInfo);
+  displayTask();
+  storeTolocalStorage(toDoInfo);
+};
+
+// EDIT TO-DO TASK FUNCTION
+const editTask = (Id, input) => {
+  toDoInfo[Id].description = input.value;
+  displayTask();
+  storeTolocalStorage(toDoInfo);
+};
+
+const getFromLocal = () => {
+  const getJsonData = localStorage.getItem('toDolist');
+  if (getJsonData) {
+    toDoInfo = JSON.parse(getJsonData);
+  }
+  displayTask();
+};
+
+
+
 /***/ })
 /******/ 	]);
 /************************************************************************/
@@ -534,56 +633,48 @@ var __webpack_exports__ = {};
 (() => {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(1);
+/* harmony import */ var _modules_variables_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(11);
+/* harmony import */ var _modules_displaylist_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(12);
 
 
-const listContainer = document.querySelector('.container');
 
-const toDoInfo = [
-  {
-    description: 'Go to School',
-    completed: false,
-    index: 1,
-  },
 
-  {
-    description: 'Eat Food',
-    completed: false,
-    index: 2,
-  },
-
-  {
-    description: 'Walkout',
-    completed: false,
-    index: 3,
-  },
-  {
-    description: 'Sleep',
-    completed: false,
-    index: 4,
-  },
-
-  {
-    description: 'Play game',
-    completed: false,
-    index: 5,
-  },
-];
-
-const toDofunction = () => {
-  toDoInfo.forEach((element) => {
-    const toDoList = `
-            <div class="to-do-container">
-                    <div class="to-do"><input type="checkbox"><input type="text" placeholder="${element.description}"></div>
-                    <div class="to-do-icon"><i class="fa-solid fa-ellipsis-vertical"></i></div>
-                </div>
-            `;
-    listContainer.innerHTML += toDoList;
-  });
-};
 window.addEventListener('load', () => {
-  toDofunction();
+  (0,_modules_displaylist_js__WEBPACK_IMPORTED_MODULE_2__.getFromLocal)();
 });
 
+_modules_variables_js__WEBPACK_IMPORTED_MODULE_1__.textInput.addEventListener('keypress', (e) => {
+  const { target } = e;
+  if (target.value === '') return;
+  if (e.key === 'Enter') {
+    (0,_modules_displaylist_js__WEBPACK_IMPORTED_MODULE_2__.addList)();
+  }
+});
+
+_modules_variables_js__WEBPACK_IMPORTED_MODULE_1__.listContainer.addEventListener('click', (e) => {
+  const { target } = e;
+  const parentElement = target.parentNode.parentNode;
+  if (!parentElement.classList.contains('to-do-container')) return;
+  const eachListId = Number(parentElement.id);
+  // target the data action
+  const { action } = target.dataset;
+
+  if (action === 'delete') {
+    (0,_modules_displaylist_js__WEBPACK_IMPORTED_MODULE_2__.deleteList)(eachListId);
+  }
+});
+
+_modules_variables_js__WEBPACK_IMPORTED_MODULE_1__.listContainer.addEventListener('change', (e) => {
+  const { target } = e;
+  const parentElement = target.parentNode.parentNode;
+  if (!parentElement.classList.contains('to-do-container')) return;
+  const eachListId = Number(parentElement.id);
+  // target the data action
+  const { action } = target.dataset;
+  if (action === 'edit') {
+    (0,_modules_displaylist_js__WEBPACK_IMPORTED_MODULE_2__.editTask)(eachListId, target);
+  }
+});
 })();
 
 /******/ })()
