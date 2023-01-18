@@ -1,49 +1,42 @@
 import './style.css';
+import { listContainer, textInput } from './modules/variables.js';
+import {
+  addList, deleteList, editTask, getFromLocal,
+} from './modules/displaylist.js';
 
-const listContainer = document.querySelector('.container');
-
-const toDoInfo = [
-  {
-    description: 'Go to School',
-    completed: false,
-    index: 1,
-  },
-
-  {
-    description: 'Eat Food',
-    completed: false,
-    index: 2,
-  },
-
-  {
-    description: 'Walkout',
-    completed: false,
-    index: 3,
-  },
-  {
-    description: 'Sleep',
-    completed: false,
-    index: 4,
-  },
-
-  {
-    description: 'Play game',
-    completed: false,
-    index: 5,
-  },
-];
-
-const toDofunction = () => {
-  toDoInfo.forEach((element) => {
-    const toDoList = `
-            <div class="to-do-container">
-                    <div class="to-do"><input type="checkbox"><input type="text" placeholder="${element.description}"></div>
-                    <div class="to-do-icon"><i class="fa-solid fa-ellipsis-vertical"></i></div>
-                </div>
-            `;
-    listContainer.innerHTML += toDoList;
-  });
-};
 window.addEventListener('load', () => {
-  toDofunction();
+  getFromLocal();
+});
+
+textInput.addEventListener('keypress', (e) => {
+  const { target } = e;
+  if (target.value === '') return;
+  if (e.key === 'Enter') {
+    addList();
+  }
+});
+
+listContainer.addEventListener('click', (e) => {
+  const { target } = e;
+  const parentElement = target.parentNode.parentNode;
+  if (!parentElement.classList.contains('to-do-container')) return;
+  const eachListId = Number(parentElement.id);
+  // target the data action
+  const { action } = target.dataset;
+
+  if (action === 'delete') {
+    deleteList(eachListId);
+  }
+});
+
+listContainer.addEventListener('change', (e) => {
+  const { target } = e;
+  const parentElement = target.parentNode.parentNode;
+  if (!parentElement.classList.contains('to-do-container')) return;
+  const eachListId = Number(parentElement.id);
+  // target the data action
+  const { action } = target.dataset;
+  if (action === 'edit') {
+    editTask(eachListId, target);
+  }
 });
