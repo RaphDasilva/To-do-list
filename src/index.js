@@ -1,7 +1,8 @@
 import './style.css';
-import { listContainer, textInput, clearBtn } from './modules/variables.js';
-import { addList, deleteList, editTask, getFromLocal } from './modules/displaylist.js';
-
+import { listContainer, textInput } from './modules/variables.js';
+import {
+  addList, deleteList, editTask, getFromLocal,
+} from './modules/displaylist.js';
 
 window.addEventListener('load', () => {
   getFromLocal();
@@ -14,7 +15,6 @@ textInput.addEventListener('keypress', (e) => {
     addList();
   }
 });
-
 
 listContainer.addEventListener('click', (e) => {
   const { target } = e;

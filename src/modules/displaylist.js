@@ -2,7 +2,6 @@ import { listContainer, textInput } from './variables.js';
 
 let toDoInfo = [];
 
-
 // Display Task
 const displayTask = () => {
   listContainer.innerHTML = '';
@@ -68,4 +67,6 @@ const getFromLocal = () => {
   displayTask();
 };
 
-export {addList, deleteList, editTask, getFromLocal};
+export {
+  addList, deleteList, editTask, getFromLocal,
+};
