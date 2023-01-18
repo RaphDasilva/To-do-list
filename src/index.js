@@ -16,20 +16,25 @@ textInput.addEventListener('keypress', (e) => {
 });
 
 
-document.addEventListener('click', (e) => {
+listContainer.addEventListener('click', (e) => {
   const { target } = e;
-  const toDoContainer = document.getElementsByClassName('to-do-container');
-  const eachListId = Number(toDoContainer.id);
+  const parentElement = target.parentNode.parentNode;
+  if (!parentElement.classList.contains('to-do-container')) return;
+  const eachListId = Number(parentElement.id);
+  // target the data action
   const { action } = target.dataset;
+
   if (action === 'delete') {
     deleteList(eachListId);
   }
 });
 
-document.addEventListener('change', (e) => {
+listContainer.addEventListener('change', (e) => {
   const { target } = e;
-  const toDoContainer = document.getElementsByClassName('to-do-container');
-  const eachListId = Number(toDoContainer.id);
+  const parentElement = target.parentNode.parentNode;
+  if (!parentElement.classList.contains('to-do-container')) return;
+  const eachListId = Number(parentElement.id);
+  // target the data action
   const { action } = target.dataset;
   if (action === 'edit') {
     editTask(eachListId, target);
