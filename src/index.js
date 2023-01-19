@@ -1,8 +1,9 @@
 import './style.css';
-import { listContainer, textInput } from './modules/variables.js';
+import { listContainer, textInput, clearBtn, refresh } from './modules/variables.js';
 import {
-  addList, deleteList, editTask, getFromLocal,
+  addList, deleteList, editTask, getFromLocal, checkCompleted, clearCompleted, refreshPage,
 } from './modules/displaylist.js';
+import checkBox from './modules/check-box';
 
 window.addEventListener('load', () => {
   getFromLocal();
@@ -39,4 +40,25 @@ listContainer.addEventListener('change', (e) => {
   if (action === 'edit') {
     editTask(eachListId, target);
   }
+});
+
+listContainer.addEventListener('click', (e) => {
+  const { target } = e;
+  const parentElement = target.parentNode.parentNode;
+  if (!parentElement.classList.contains('to-do-container')) return;
+  const eachListId = Number(parentElement.id);
+  // target the data action
+  const { action } = target.dataset;
+  if (action === 'checkbox') {
+    checkCompleted(eachListId, target);
+    checkBox(target);
+  }
+});
+
+clearBtn.addEventListener('click', () => {
+  clearCompleted();
+});
+
+refresh.addEventListener('click', () => {
+  refreshPage();
 });
