@@ -44,7 +44,7 @@
   color: #302e2e;
 }
 
-.fa-rotate:hover{
+.fa-rotate:hover {
   cursor: pointer;
   color: rgb(135, 188, 223);
 }
@@ -55,7 +55,7 @@
   margin-left: -20px;
 }
 
-.fa-trash-can:hover{
+.fa-trash-can:hover {
   color: tomato;
   cursor: pointer;
 }
@@ -91,11 +91,11 @@ input[type="text"] {
     sans-serif;
 }
 
-input[type="text"]:focus{
+input[type="text"]:focus {
   outline: none;
 }
 
-#the-input:focus{
+#the-input:focus {
   outline: none;
   background-color: rgb(211, 212, 99);
 }

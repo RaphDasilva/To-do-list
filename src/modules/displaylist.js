@@ -1,4 +1,4 @@
-import { listContainer, textInput, refresh } from './variables.js';
+import { listContainer, textInput } from './variables.js';
 import checkBox from './check-box.js';
 
 let toDoInfo = [];
@@ -86,7 +86,7 @@ const clearCompleted = () => {
   storeTolocalStorage(toDoInfo);
 };
 
-const refreshPage = () =>{
+const refreshPage = () => {
   window.location.reload();
 };
 export {

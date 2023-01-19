@@ -1,9 +1,11 @@
 import './style.css';
-import { listContainer, textInput, clearBtn, refresh } from './modules/variables.js';
+import {
+  listContainer, textInput, clearBtn, refresh,
+} from './modules/variables.js';
 import {
   addList, deleteList, editTask, getFromLocal, checkCompleted, clearCompleted, refreshPage,
 } from './modules/displaylist.js';
-import checkBox from './modules/check-box';
+import checkBox from './modules/check-box.js';
 
 window.addEventListener('load', () => {
   getFromLocal();
