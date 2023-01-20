@@ -86,13 +86,8 @@ const getFromLocal = () => {
 
 /** CHECKBOX FUNCTION */
 const checkCompleted = (buttonId, box) => {
-
   toDoInfo[buttonId].completed = checkBox(box);
   storeTolocalStorage(toDoInfo);
-  // if (toDoInfo[buttonId].completed === true) {
-  //   box.checked = true;
-  //   box.nextElementSibling.classList.add('line-over');
-  // }
 };
 
 const clearCompleted = () => {
