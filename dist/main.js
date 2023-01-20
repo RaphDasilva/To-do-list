@@ -350,7 +350,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "* {\n  margin: 0;\n  padding: 0;\n  box-sizing: border-box;\n}\n\n.list-container {\n  display: flex;\n  flex-direction: column;\n  gap: 5px;\n  width: 70%;\n  height: auto;\n  margin: auto;\n  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.19);\n  margin-top: 50px;\n  background-color: #faf5f5;\n}\n\n.container {\n  display: flex;\n  gap: 5px;\n  flex-direction: column;\n}\n\n.title {\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  background-color: #fff;\n  color: rgb(39, 38, 38);\n  padding: 20px;\n  font-family:\n    \"Lucida Sans\",\n    \"Lucida Sans Regular\",\n    \"Lucida Grande\",\n    \"Lucida Sans Unicode\",\n    Geneva,\n    Verdana,\n    sans-serif;\n}\n\n.fa-rotate {\n  font-size: 30px;\n  color: #302e2e;\n}\n\n.fa-rotate:hover {\n  cursor: pointer;\n  color: rgb(135, 188, 223);\n}\n\n.fa-trash-can {\n  font-size: 30px;\n  color: #302e2e;\n  margin-left: -20px;\n}\n\n.fa-trash-can:hover {\n  color: tomato;\n  cursor: pointer;\n}\n\n.to-do-container {\n  display: flex;\n  align-items: center;\n  gap: 30px;\n  background-color: #fff;\n}\n\n.to-do {\n  display: flex;\n  gap: 10px;\n  padding: 20px;\n  width: 95%;\n}\n\ninput[type=\"text\"] {\n  width: 100%;\n  padding: 20px;\n  font-size: 20px;\n  color: rgb(39, 38, 38);\n  border: none;\n  padding-left: 50px;\n  font-family:\n    \"Lucida Sans\",\n    \"Lucida Sans Regular\",\n    \"Lucida Grande\",\n    \"Lucida Sans Unicode\",\n    Geneva,\n    Verdana,\n    sans-serif;\n}\n\ninput[type=\"text\"]:focus {\n  outline: none;\n}\n\n#the-input:focus {\n  outline: none;\n  background-color: rgb(211, 212, 99);\n}\n\ninput[type=\"checkbox\"] {\n  width: 30px;\n}\n\n.clear {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  padding: 40px;\n  background-color: #d1d1d1;\n  color: #a09c9c;\n  width: 100%;\n  font-family:\n    \"Lucida Sans\",\n    \"Lucida Sans Regular\",\n    \"Lucida Grande\",\n    \"Lucida Sans Unicode\",\n    Geneva,\n    Verdana,\n    sans-serif;\n  font-size: 20px;\n  font-weight: 800;\n  font-style: italic;\n}\n\n.clear:hover {\n  cursor: pointer;\n}\n\n.line-over {\n  text-decoration: line-through;\n  color: rgb(128, 128, 128);\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "* {\n  margin: 0;\n  padding: 0;\n  box-sizing: border-box;\n}\n\n.list-container {\n  display: flex;\n  flex-direction: column;\n  gap: 5px;\n  width: 70%;\n  height: auto;\n  margin: auto;\n  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.19);\n  margin-top: 50px;\n  background-color: #faf5f5;\n}\n\n.container {\n  display: flex;\n  gap: 5px;\n  flex-direction: column;\n}\n\n.title {\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  background-color: #fff;\n  color: rgb(39, 38, 38);\n  padding: 20px;\n  font-family:\n    \"Lucida Sans\",\n    \"Lucida Sans Regular\",\n    \"Lucida Grande\",\n    \"Lucida Sans Unicode\",\n    Geneva,\n    Verdana,\n    sans-serif;\n}\n\n.fa-rotate {\n  font-size: 30px;\n  color: #302e2e;\n}\n\n.fa-rotate:hover {\n  cursor: pointer;\n  color: rgb(135, 188, 223);\n}\n\n.fa-trash-can {\n  font-size: 30px;\n  color: #302e2e;\n  margin-left: -20px;\n}\n\n.fa-trash-can:hover {\n  color: tomato;\n  cursor: pointer;\n}\n\n.to-do-container {\n  display: flex;\n  align-items: center;\n  gap: 30px;\n  background-color: #fff;\n}\n\n.to-do {\n  display: flex;\n  gap: 10px;\n  padding: 20px;\n  width: 95%;\n}\n\ninput[type=\"text\"] {\n  width: 100%;\n  padding: 20px;\n  font-size: 20px;\n  color: rgb(39, 38, 38);\n  border: none;\n  padding-left: 50px;\n  font-family:\n    \"Lucida Sans\",\n    \"Lucida Sans Regular\",\n    \"Lucida Grande\",\n    \"Lucida Sans Unicode\",\n    Geneva,\n    Verdana,\n    sans-serif;\n}\n\ninput[type=\"text\"]:focus {\n  outline: none;\n}\n\n#the-input:focus {\n  outline: none;\n  background-color: rgb(211, 212, 99);\n}\n\ninput[type=\"checkbox\"] {\n  width: 30px;\n}\n\n.clear {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  padding: 40px;\n  background-color: #d1d1d1;\n  color: #a09c9c;\n  width: 100%;\n  font-family:\n    \"Lucida Sans\",\n    \"Lucida Sans Regular\",\n    \"Lucida Grande\",\n    \"Lucida Sans Unicode\",\n    Geneva,\n    Verdana,\n    sans-serif;\n  font-size: 20px;\n  font-weight: 800;\n  font-style: italic;\n}\n\n.clear:hover {\n  cursor: pointer;\n}\n\n.line-over {\n  text-decoration: line-through;\n  color: rgb(128, 128, 128);\n}\n\n.to-do-icon {\n  margin-right: 20px;\n}\n\n.check-true {\n  text-decoration: line-through;\n}\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -498,19 +498,35 @@ let toDoInfo = [];
 const displayTask = () => {
   _variables_js__WEBPACK_IMPORTED_MODULE_0__.listContainer.innerHTML = '';
   toDoInfo.forEach((element) => {
-    const toDoList = `
-              <div class="to-do-container" id = "${element.index - 1}">
-                      <div class="to-do">
-                        <input type="checkbox" data-action="checkbox">
-                        <input type="text" value="${element.description}" data-action="edit" data.id = "${element.index}">
-                      </div>
-                      <div class="to-do-icon" id="delete-btn">
-                        <i class="fa-solid fa-trash-can" data-action="delete"></i>
-                      </div>
-                  </div>
-              `;
-    _variables_js__WEBPACK_IMPORTED_MODULE_0__.listContainer.innerHTML += toDoList;
-    _variables_js__WEBPACK_IMPORTED_MODULE_0__.textInput.value = '';
+    if (element.completed === true) {
+      const toDoList = `
+      <div class="to-do-container" id = "${element.index - 1}">
+              <div class="to-do">
+                <input type="checkbox" data-action="checkbox" checked >
+                <input type="text" value="${element.description}" data-action="edit" data.id = "${element.index}" class = "check-true">
+              </div>
+              <div class="to-do-icon" id="delete-btn">
+                <i class="fa-solid fa-trash-can" data-action="delete"></i>
+              </div>
+          </div>
+      `;
+      _variables_js__WEBPACK_IMPORTED_MODULE_0__.listContainer.innerHTML += toDoList;
+      _variables_js__WEBPACK_IMPORTED_MODULE_0__.textInput.value = '';
+    } else if (element.completed === false) {
+      const toDoList = `
+      <div class="to-do-container" id = "${element.index - 1}">
+              <div class="to-do">
+                <input type="checkbox" data-action="checkbox">
+                <input type="text" value="${element.description}" data-action="edit" data.id = "${element.index}">
+              </div>
+              <div class="to-do-icon" id="delete-btn">
+                <i class="fa-solid fa-trash-can" data-action="delete"></i>
+              </div>
+          </div>
+      `;
+      _variables_js__WEBPACK_IMPORTED_MODULE_0__.listContainer.innerHTML += toDoList;
+      _variables_js__WEBPACK_IMPORTED_MODULE_0__.textInput.value = '';
+    }
   });
 };
 // Add to local Storage
@@ -561,13 +577,8 @@ const getFromLocal = () => {
 
 /** CHECKBOX FUNCTION */
 const checkCompleted = (buttonId, box) => {
-  box.nextElementSibling.classList.toggle('line-over');
   toDoInfo[buttonId].completed = (0,_check_box_js__WEBPACK_IMPORTED_MODULE_1__["default"])(box);
   storeTolocalStorage(toDoInfo);
-  if (toDoInfo[buttonId].completed === true) {
-    box.checked = true;
-    box.nextElementSibling.classList.add('line-over');
-  }
 };
 
 const clearCompleted = () => {
@@ -733,6 +744,7 @@ _modules_variables_js__WEBPACK_IMPORTED_MODULE_1__.listContainer.addEventListene
   if (action === 'checkbox') {
     (0,_modules_displaylist_js__WEBPACK_IMPORTED_MODULE_2__.checkCompleted)(eachListId, target);
     (0,_modules_check_box_js__WEBPACK_IMPORTED_MODULE_3__["default"])(target);
+    (0,_modules_displaylist_js__WEBPACK_IMPORTED_MODULE_2__.getFromLocal)();
   }
 });
 
