@@ -39,9 +39,25 @@
     sans-serif;
 }
 
-.fa-solid {
+.fa-rotate {
   font-size: 30px;
   color: #302e2e;
+}
+
+.fa-rotate:hover {
+  cursor: pointer;
+  color: rgb(135, 188, 223);
+}
+
+.fa-trash-can {
+  font-size: 30px;
+  color: #302e2e;
+  margin-left: -20px;
+}
+
+.fa-trash-can:hover {
+  color: tomato;
+  cursor: pointer;
 }
 
 .to-do-container {
@@ -75,6 +91,15 @@ input[type="text"] {
     sans-serif;
 }
 
+input[type="text"]:focus {
+  outline: none;
+}
+
+#the-input:focus {
+  outline: none;
+  background-color: rgb(211, 212, 99);
+}
+
 input[type="checkbox"] {
   width: 30px;
 }
@@ -98,4 +123,21 @@ input[type="checkbox"] {
   font-size: 20px;
   font-weight: 800;
   font-style: italic;
+}
+
+.clear:hover {
+  cursor: pointer;
+}
+
+.line-over {
+  text-decoration: line-through;
+  color: rgb(128, 128, 128);
+}
+
+.to-do-icon {
+  margin-right: 20px;
+}
+
+.check-true {
+  text-decoration: line-through;
 }

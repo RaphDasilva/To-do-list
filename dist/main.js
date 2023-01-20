@@ -350,7 +350,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "* {\n  margin: 0;\n  padding: 0;\n  box-sizing: border-box;\n}\n\n.list-container {\n  display: flex;\n  flex-direction: column;\n  gap: 5px;\n  width: 70%;\n  height: auto;\n  margin: auto;\n  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.19);\n  margin-top: 50px;\n  background-color: #faf5f5;\n}\n\n.container {\n  display: flex;\n  gap: 5px;\n  flex-direction: column;\n}\n\n.title {\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  background-color: #fff;\n  color: rgb(39, 38, 38);\n  padding: 20px;\n  font-family:\n    \"Lucida Sans\",\n    \"Lucida Sans Regular\",\n    \"Lucida Grande\",\n    \"Lucida Sans Unicode\",\n    Geneva,\n    Verdana,\n    sans-serif;\n}\n\n.fa-solid {\n  font-size: 30px;\n  color: #302e2e;\n}\n\n.to-do-container {\n  display: flex;\n  align-items: center;\n  gap: 30px;\n  background-color: #fff;\n}\n\n.to-do {\n  display: flex;\n  gap: 10px;\n  padding: 20px;\n  width: 95%;\n}\n\ninput[type=\"text\"] {\n  width: 100%;\n  padding: 20px;\n  font-size: 20px;\n  color: rgb(39, 38, 38);\n  border: none;\n  padding-left: 50px;\n  font-family:\n    \"Lucida Sans\",\n    \"Lucida Sans Regular\",\n    \"Lucida Grande\",\n    \"Lucida Sans Unicode\",\n    Geneva,\n    Verdana,\n    sans-serif;\n}\n\ninput[type=\"checkbox\"] {\n  width: 30px;\n}\n\n.clear {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  padding: 40px;\n  background-color: #d1d1d1;\n  color: #a09c9c;\n  width: 100%;\n  font-family:\n    \"Lucida Sans\",\n    \"Lucida Sans Regular\",\n    \"Lucida Grande\",\n    \"Lucida Sans Unicode\",\n    Geneva,\n    Verdana,\n    sans-serif;\n  font-size: 20px;\n  font-weight: 800;\n  font-style: italic;\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "* {\n  margin: 0;\n  padding: 0;\n  box-sizing: border-box;\n}\n\n.list-container {\n  display: flex;\n  flex-direction: column;\n  gap: 5px;\n  width: 70%;\n  height: auto;\n  margin: auto;\n  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.19);\n  margin-top: 50px;\n  background-color: #faf5f5;\n}\n\n.container {\n  display: flex;\n  gap: 5px;\n  flex-direction: column;\n}\n\n.title {\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  background-color: #fff;\n  color: rgb(39, 38, 38);\n  padding: 20px;\n  font-family:\n    \"Lucida Sans\",\n    \"Lucida Sans Regular\",\n    \"Lucida Grande\",\n    \"Lucida Sans Unicode\",\n    Geneva,\n    Verdana,\n    sans-serif;\n}\n\n.fa-rotate {\n  font-size: 30px;\n  color: #302e2e;\n}\n\n.fa-rotate:hover {\n  cursor: pointer;\n  color: rgb(135, 188, 223);\n}\n\n.fa-trash-can {\n  font-size: 30px;\n  color: #302e2e;\n  margin-left: -20px;\n}\n\n.fa-trash-can:hover {\n  color: tomato;\n  cursor: pointer;\n}\n\n.to-do-container {\n  display: flex;\n  align-items: center;\n  gap: 30px;\n  background-color: #fff;\n}\n\n.to-do {\n  display: flex;\n  gap: 10px;\n  padding: 20px;\n  width: 95%;\n}\n\ninput[type=\"text\"] {\n  width: 100%;\n  padding: 20px;\n  font-size: 20px;\n  color: rgb(39, 38, 38);\n  border: none;\n  padding-left: 50px;\n  font-family:\n    \"Lucida Sans\",\n    \"Lucida Sans Regular\",\n    \"Lucida Grande\",\n    \"Lucida Sans Unicode\",\n    Geneva,\n    Verdana,\n    sans-serif;\n}\n\ninput[type=\"text\"]:focus {\n  outline: none;\n}\n\n#the-input:focus {\n  outline: none;\n  background-color: rgb(211, 212, 99);\n}\n\ninput[type=\"checkbox\"] {\n  width: 30px;\n}\n\n.clear {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  padding: 40px;\n  background-color: #d1d1d1;\n  color: #a09c9c;\n  width: 100%;\n  font-family:\n    \"Lucida Sans\",\n    \"Lucida Sans Regular\",\n    \"Lucida Grande\",\n    \"Lucida Sans Unicode\",\n    Geneva,\n    Verdana,\n    sans-serif;\n  font-size: 20px;\n  font-weight: 800;\n  font-style: italic;\n}\n\n.clear:hover {\n  cursor: pointer;\n}\n\n.line-over {\n  text-decoration: line-through;\n  color: rgb(128, 128, 128);\n}\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -463,11 +463,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "clearBtn": () => (/* binding */ clearBtn),
 /* harmony export */   "listContainer": () => (/* binding */ listContainer),
+/* harmony export */   "refresh": () => (/* binding */ refresh),
 /* harmony export */   "textInput": () => (/* binding */ textInput)
 /* harmony export */ });
 const listContainer = document.querySelector('.container');
 const textInput = document.querySelector('.the-input');
 const clearBtn = document.querySelector('.clear');
+const refresh = document.querySelector('.fa-rotate');
 
 
 
@@ -478,11 +480,16 @@ const clearBtn = document.querySelector('.clear');
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "addList": () => (/* binding */ addList),
+/* harmony export */   "checkCompleted": () => (/* binding */ checkCompleted),
+/* harmony export */   "clearCompleted": () => (/* binding */ clearCompleted),
 /* harmony export */   "deleteList": () => (/* binding */ deleteList),
 /* harmony export */   "editTask": () => (/* binding */ editTask),
-/* harmony export */   "getFromLocal": () => (/* binding */ getFromLocal)
+/* harmony export */   "getFromLocal": () => (/* binding */ getFromLocal),
+/* harmony export */   "refreshPage": () => (/* binding */ refreshPage)
 /* harmony export */ });
 /* harmony import */ var _variables_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(11);
+/* harmony import */ var _check_box_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(13);
+
 
 
 let toDoInfo = [];
@@ -498,7 +505,7 @@ const displayTask = () => {
                         <input type="text" value="${element.description}" data-action="edit" data.id = "${element.index}">
                       </div>
                       <div class="to-do-icon" id="delete-btn">
-                        <i class="fa-solid fa-ellipsis-vertical" data-action="delete"></i>
+                        <i class="fa-solid fa-trash-can" data-action="delete"></i>
                       </div>
                   </div>
               `;
@@ -552,7 +559,45 @@ const getFromLocal = () => {
   displayTask();
 };
 
+/** CHECKBOX FUNCTION */
+const checkCompleted = (buttonId, box) => {
+  box.nextElementSibling.classList.toggle('line-over');
+  toDoInfo[buttonId].completed = (0,_check_box_js__WEBPACK_IMPORTED_MODULE_1__["default"])(box);
+  storeTolocalStorage(toDoInfo);
+  if (toDoInfo[buttonId].completed === true) {
+    box.checked = true;
+    box.nextElementSibling.classList.add('line-over');
+  }
+};
 
+const clearCompleted = () => {
+  toDoInfo = toDoInfo.filter((obj) => obj.completed !== true);
+  displayTask();
+  resetIndex(toDoInfo);
+  storeTolocalStorage(toDoInfo);
+};
+
+const refreshPage = () => {
+  window.location.reload();
+};
+
+
+/***/ }),
+/* 13 */
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+const checkBox = (box) => {
+  if (box.checked) {
+    return true;
+  }
+  return false;
+};
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (checkBox);
 
 /***/ })
 /******/ 	]);
@@ -635,6 +680,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(1);
 /* harmony import */ var _modules_variables_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(11);
 /* harmony import */ var _modules_displaylist_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(12);
+/* harmony import */ var _modules_check_box_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(13);
+
 
 
 
@@ -674,6 +721,27 @@ _modules_variables_js__WEBPACK_IMPORTED_MODULE_1__.listContainer.addEventListene
   if (action === 'edit') {
     (0,_modules_displaylist_js__WEBPACK_IMPORTED_MODULE_2__.editTask)(eachListId, target);
   }
+});
+
+_modules_variables_js__WEBPACK_IMPORTED_MODULE_1__.listContainer.addEventListener('click', (e) => {
+  const { target } = e;
+  const parentElement = target.parentNode.parentNode;
+  if (!parentElement.classList.contains('to-do-container')) return;
+  const eachListId = Number(parentElement.id);
+  // target the data action
+  const { action } = target.dataset;
+  if (action === 'checkbox') {
+    (0,_modules_displaylist_js__WEBPACK_IMPORTED_MODULE_2__.checkCompleted)(eachListId, target);
+    (0,_modules_check_box_js__WEBPACK_IMPORTED_MODULE_3__["default"])(target);
+  }
+});
+
+_modules_variables_js__WEBPACK_IMPORTED_MODULE_1__.clearBtn.addEventListener('click', () => {
+  (0,_modules_displaylist_js__WEBPACK_IMPORTED_MODULE_2__.clearCompleted)();
+});
+
+_modules_variables_js__WEBPACK_IMPORTED_MODULE_1__.refresh.addEventListener('click', () => {
+  (0,_modules_displaylist_js__WEBPACK_IMPORTED_MODULE_2__.refreshPage)();
 });
 })();
 

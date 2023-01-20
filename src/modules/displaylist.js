@@ -1,4 +1,5 @@
 import { listContainer, textInput } from './variables.js';
+import checkBox from './check-box.js';
 
 let toDoInfo = [];
 
@@ -6,19 +7,35 @@ let toDoInfo = [];
 const displayTask = () => {
   listContainer.innerHTML = '';
   toDoInfo.forEach((element) => {
-    const toDoList = `
-              <div class="to-do-container" id = "${element.index - 1}">
-                      <div class="to-do">
-                        <input type="checkbox" data-action="checkbox">
-                        <input type="text" value="${element.description}" data-action="edit" data.id = "${element.index}">
-                      </div>
-                      <div class="to-do-icon" id="delete-btn">
-                        <i class="fa-solid fa-ellipsis-vertical" data-action="delete"></i>
-                      </div>
-                  </div>
-              `;
-    listContainer.innerHTML += toDoList;
-    textInput.value = '';
+    if (element.completed === true) {
+      const toDoList = `
+      <div class="to-do-container" id = "${element.index - 1}">
+              <div class="to-do">
+                <input type="checkbox" data-action="checkbox" checked >
+                <input type="text" value="${element.description}" data-action="edit" data.id = "${element.index}" class = "check-true">
+              </div>
+              <div class="to-do-icon" id="delete-btn">
+                <i class="fa-solid fa-trash-can" data-action="delete"></i>
+              </div>
+          </div>
+      `;
+      listContainer.innerHTML += toDoList;
+      textInput.value = '';
+    } else if (element.completed === false) {
+      const toDoList = `
+      <div class="to-do-container" id = "${element.index - 1}">
+              <div class="to-do">
+                <input type="checkbox" data-action="checkbox">
+                <input type="text" value="${element.description}" data-action="edit" data.id = "${element.index}">
+              </div>
+              <div class="to-do-icon" id="delete-btn">
+                <i class="fa-solid fa-trash-can" data-action="delete"></i>
+              </div>
+          </div>
+      `;
+      listContainer.innerHTML += toDoList;
+      textInput.value = '';
+    }
   });
 };
 // Add to local Storage
@@ -67,6 +84,22 @@ const getFromLocal = () => {
   displayTask();
 };
 
+/** CHECKBOX FUNCTION */
+const checkCompleted = (buttonId, box) => {
+  toDoInfo[buttonId].completed = checkBox(box);
+  storeTolocalStorage(toDoInfo);
+};
+
+const clearCompleted = () => {
+  toDoInfo = toDoInfo.filter((obj) => obj.completed !== true);
+  displayTask();
+  resetIndex(toDoInfo);
+  storeTolocalStorage(toDoInfo);
+};
+
+const refreshPage = () => {
+  window.location.reload();
+};
 export {
-  addList, deleteList, editTask, getFromLocal,
+  addList, deleteList, editTask, getFromLocal, checkCompleted, clearCompleted, refreshPage,
 };
