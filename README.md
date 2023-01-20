@@ -87,7 +87,7 @@
 
 > Add a link to your deployed project.
 
-- [Live Demo Link](Coming soon)
+- [Live Demo Link](https://raphdasilva.github.io/To-do-list/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
