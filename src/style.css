@@ -133,3 +133,11 @@ input[type="checkbox"] {
   text-decoration: line-through;
   color: rgb(128, 128, 128);
 }
+
+.to-do-icon {
+  margin-right: 20px;
+}
+
+.check-true {
+  text-decoration: line-through;
+}

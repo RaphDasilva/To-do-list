@@ -54,6 +54,7 @@ listContainer.addEventListener('click', (e) => {
   if (action === 'checkbox') {
     checkCompleted(eachListId, target);
     checkBox(target);
+    getFromLocal();
   }
 });
 

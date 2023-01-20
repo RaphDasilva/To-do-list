@@ -7,19 +7,35 @@ let toDoInfo = [];
 const displayTask = () => {
   listContainer.innerHTML = '';
   toDoInfo.forEach((element) => {
-    const toDoList = `
-              <div class="to-do-container" id = "${element.index - 1}">
-                      <div class="to-do">
-                        <input type="checkbox" data-action="checkbox">
-                        <input type="text" value="${element.description}" data-action="edit" data.id = "${element.index}">
-                      </div>
-                      <div class="to-do-icon" id="delete-btn">
-                        <i class="fa-solid fa-trash-can" data-action="delete"></i>
-                      </div>
-                  </div>
-              `;
-    listContainer.innerHTML += toDoList;
-    textInput.value = '';
+    if (element.completed === true) {
+      const toDoList = `
+      <div class="to-do-container" id = "${element.index - 1}">
+              <div class="to-do">
+                <input type="checkbox" data-action="checkbox" checked >
+                <input type="text" value="${element.description}" data-action="edit" data.id = "${element.index}" class = "check-true">
+              </div>
+              <div class="to-do-icon" id="delete-btn">
+                <i class="fa-solid fa-trash-can" data-action="delete"></i>
+              </div>
+          </div>
+      `;
+      listContainer.innerHTML += toDoList;
+      textInput.value = '';
+    } else if (element.completed === false) {
+      const toDoList = `
+      <div class="to-do-container" id = "${element.index - 1}">
+              <div class="to-do">
+                <input type="checkbox" data-action="checkbox">
+                <input type="text" value="${element.description}" data-action="edit" data.id = "${element.index}">
+              </div>
+              <div class="to-do-icon" id="delete-btn">
+                <i class="fa-solid fa-trash-can" data-action="delete"></i>
+              </div>
+          </div>
+      `;
+      listContainer.innerHTML += toDoList;
+      textInput.value = '';
+    }
   });
 };
 // Add to local Storage
@@ -70,13 +86,13 @@ const getFromLocal = () => {
 
 /** CHECKBOX FUNCTION */
 const checkCompleted = (buttonId, box) => {
-  box.nextElementSibling.classList.toggle('line-over');
+
   toDoInfo[buttonId].completed = checkBox(box);
   storeTolocalStorage(toDoInfo);
-  if (toDoInfo[buttonId].completed === true) {
-    box.checked = true;
-    box.nextElementSibling.classList.add('line-over');
-  }
+  // if (toDoInfo[buttonId].completed === true) {
+  //   box.checked = true;
+  //   box.nextElementSibling.classList.add('line-over');
+  // }
 };
 
 const clearCompleted = () => {
